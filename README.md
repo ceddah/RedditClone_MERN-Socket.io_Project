@@ -10,4 +10,4 @@ Key Features:
 - CRUD Operations
 - Realtime updates with socket.io
 
-#### Preview: [Live Demo:](https://rclonemern.herokuapp.com//)
+#### Preview: [Live Demo:](https://rclonemern.herokuapp.com/)
