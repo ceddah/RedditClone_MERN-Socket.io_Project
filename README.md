@@ -8,7 +8,7 @@ Key Features:
 - Authentication Flow (JWT)
 - Data Validation
 - CRUD Operations
-- Simple Pagination
+- Pagination
 - Realtime updates with socket.io
 
 #### Preview: [Live Demo:](https://rclonemern.herokuapp.com/)
