@@ -1,0 +1,161 @@
+.sidebar {
+    flex: 1;
+    height: 100vh;
+    background-color: $gold;
+    display: flex;
+    flex-direction: column;
+
+    .close-menu-btn {
+        display: none;
+    }
+
+    .open-menu-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 0;
+
+        &__btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #aaa;
+            background-color: $gray;
+            color: $black;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #bdb9b9;
+            }
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    .user-list {
+        margin-top: 5rem;
+        user-select: none;
+
+        h4 {
+            padding-left: 1.5rem;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        &__ul {
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 3rem;
+
+            li {
+                margin: 1rem 0;
+            }
+        }
+    }
+
+    .num-of-messages {
+        margin: auto 0 3rem 0;
+        font-weight: 400;
+        text-align: center;
+        padding: 2rem;
+        background-color: $dark-green;
+        color: $gold;
+        user-select: none;
+    }
+}
+
+@media (max-width: $XL-breakpoint) {
+    //Remodel Sidebar into Menu with open btn
+    // Maybe only on Mobile devices have it as fixed nav at the bottom/top
+    .sidebar {
+        position: fixed;
+        right: -230px;
+        // right: 0px;
+        top: 0;
+        width: 230px;
+        padding-top: 3rem;
+        transition: 0.3s ease;
+        border-left: 1px solid $gold-hover;
+
+        &.menuActive {
+            right: 0;
+        }
+
+        .close-menu-btn {
+            display: block;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            font-size: 1.7rem;
+            color: $dark-green;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateX(0.3rem);
+            }
+        }
+
+        .open-menu-btn {
+            display: block;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            position: absolute;
+            top: 50%;
+            left: -3rem;
+            font-size: 1.7rem;
+            color: $gold;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateX(-0.3rem);
+            }
+        }
+    }
+}
+
+
+@media (max-width: $L-breakpoint) {
+    .sidebar {
+        width: 200px;
+        right: -200px;
+    }
+}
+
+@media (max-width: $M-breakpoint) {
+    .sidebar {
+        top: 0;
+        // bottom: 0;
+        box-shadow: rgba(255, 238, 0, 0.2) 0px 7px 29px 0px;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        padding-top: 0;
+        border-bottom: 1px solid $gold-hover;
+    }
+
+    .nav-menu {
+        padding: 0;
+        height: 100%;
+    }
+
+    .num-of-messages {
+        display: none;
+    }
+    .user-list {
+        display: none;
+    }
+}
