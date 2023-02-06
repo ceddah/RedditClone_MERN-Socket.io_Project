@@ -1,0 +1,81 @@
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000, $alpha: 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    &__card {
+        background-color: $white;
+        padding: 2rem;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            letter-spacing: 0.05rem;
+            font-size: 18px;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            margin: 0 1rem;
+            border: none;
+            background-color: transparent;
+            padding: 0.6rem 1rem;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .modal-btn__red {
+            background-color: #E35335;
+            color: $white;
+            letter-spacing: 0.05rem;
+
+            &:hover {
+                background-color: #d15036  
+            }
+        }
+
+        .modal-btn__gray {
+            background-color: #D3D3D3;
+            color: $black;
+            letter-spacing: 0.05rem;
+
+            &:hover {
+                background-color: #C0C0C0  
+            }
+        }
+
+        .modal-btn__green {
+            background-color: $emerald;
+            color: $white;
+            letter-spacing: 0.05rem;
+
+            &:hover {
+                background-color: #46aa67;
+            }
+        }
+
+        .edit-modal__form {
+            width: 350px;
+            margin-bottom: 1rem;
+
+            .edit-modal__textarea {
+                width: 100%;
+                resize: vertical;
+                outline: none;
+                border: 1px solid $gray;
+                padding: 0.5rem;
+                font-size: 14px;
+            }
+        }
+    }
+}
